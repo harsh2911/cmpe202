@@ -3,26 +3,38 @@ import java.text.DecimalFormat;
 
 public class CustomBurger extends Composite
 {
-    PriceDecorator decorator = null ;
+    
+    public CustomBurger ()
+    {
+
+    }
     
     public CustomBurger ( String d )
     {
         super(d) ;
     }
     
-    public void setDecorator( PriceDecorator p )
+    public CustomBurger ( String d, double p )
     {
-        this.decorator = p ;
+        super(d,p) ;
     }
     
     public void printDescription() {
         DecimalFormat fmt = new DecimalFormat("0.00");
-        System.out.println( " " + description + " " + fmt.format(decorator.getPrice()) );
+        
+        if (price > 0)
+            description = description + " " + String.valueOf(price);  
+            
+        System.out.println( description ) ;
+        
         for (Component obj  : components)
         {
             obj.printDescription();
+            
         }
     }
+
+ 
 }
 
        

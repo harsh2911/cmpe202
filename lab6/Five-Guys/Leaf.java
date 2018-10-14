@@ -22,21 +22,30 @@ public class Leaf implements Component {
     
     public void printDescription() {
         DecimalFormat fmt = new DecimalFormat("0.00");
-        System.out.println( " " + description + " " + fmt.format(price) ) ;
-    }
+
+        if (price > 0)
+            description = description + " " + String.valueOf(price);  
+            
+        System.out.println( description ) ;
+    
+}
+    
+    public double getPrice() {
+        return price;
+      }
 
     public void addChild(Component c) {
-	    // no implementation
-	}
-
-	public void removeChild(Component c) {
         // no implementation
-	}
+    }
 
-	public Component getChild(int i) {
+    public void removeChild(Component c) {
+        // no implementation
+    }
+
+    public Component getChild(int i) {
         // no implementation
         return null ;
-	}
-	 
+    }
+     
 }
  
