@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=FictionBookDecorator
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ FictionBookDecorator\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=book
+comment1.target=FictionBookDecorator(Book)
+comment2.params=
+comment2.target=java.lang.String\ describe()
+numComments=3
